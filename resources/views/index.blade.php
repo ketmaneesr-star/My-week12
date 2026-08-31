@@ -1,6 +1,6 @@
-@extends('layout')
+@extends('layouts.app')
 
-@section('title', "ยินดีต้อนรับเข้าสู่เว็บไซต์ของฉัน")
+@section('title', 'ยินดีต้อนรับ')
 
 @section('content')
     <h2>ยินดีต้อนรับสู่เว็บไซต์ของเรา</h2>

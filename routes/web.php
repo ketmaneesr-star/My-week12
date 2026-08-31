@@ -15,7 +15,7 @@ Route::get('/test-db', function () {
 });
 
 Route::get('/', function () {
-    return redirect()->route('products.index');
+    return view('index');
 });
 
 Route::get('/abouts', [AdminController::class, 'about'])->name('abouts');
@@ -34,3 +34,6 @@ Route::get('/products', [ProductController::class, 'index'])->name('products.ind
 Route::get('/product/change/{id}', [ProductController::class, 'changeStatus'])->name('products.change');
 Route::get('/product/edit/{id}', [ProductController::class, 'edit'])->name('products.edit');
 Route::post('/product/update/{id}', [ProductController::class, 'update'])->name('products.update');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
